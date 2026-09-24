@@ -24,12 +24,13 @@
         <span class="brand-name">Pointly</span>
       </a>
       <nav class="nav-links">
-        <a href="#setup">Setup</a>
-        <a href="#setup">Change Log</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#setup">Setup Guide</a>
+        <a href="#protips">Pro-Tips</a>
         <a href="privacy.html">Privacy Policy</a>
       </nav>
       <div class="header-cta">
-        <a href="https://play.google.com" class="btn-play">Get on Google Play</a>
+        <a href="https://github.com/pointly-app/pointly/releases" class="btn-play">Get on Google Play</a>
       </div>
     </div>
   </header>
@@ -43,6 +44,7 @@
             <span class="pulse-dot"></span>
             <span>Universal Spatial Remote for Home Assistant</span>
             <span class="divider">·</span>
+            <span class="mono-tag">v1.2 Open Beta</span>
           </div>
 
           <h1 class="hero-title">
@@ -55,17 +57,22 @@
           </p>
 
           <div class="hero-ctas">
-            <a href="https://play.google.com" class="btn-google-play">
+            <a href="https://github.com/pointly-app/pointly/releases" class="btn-google-play">
               <span class="btn-text">
                 <span class="subtext">GET IT ON</span>
                 <span class="maintext">Google Play</span>
               </span>
             </a>
+
+            <a href="https://github.com/pointly-app/pointly/releases" class="btn-apk">
+              Download APK v1.2
+            </a>
           </div>
 
           <div class="hero-specs">
-            <span class="spec-item">Android 12+</span>
-            <span class="spec-item">Room-Aware</span>
+            <span class="spec-item">✓ Android 12, 13, 14 &amp; 15</span>
+            <span class="spec-item">✓ Room-Aware (No drywall cross-firing)</span>
+            <span class="spec-item">✓ 100% Local WebSocket Speed</span>
           </div>
         </div>
 
@@ -76,6 +83,41 @@
               <div class="phone-cam-dot"></div>
             </div>
 
+            <!-- Phone Screen Simulation -->
+            <div class="phone-screen">
+              <div class="reticle-status-bar">
+                <span class="zone-badge">Zone: Living Room</span>
+                <span class="sensor-badge">42° Azimuth</span>
+              </div>
+
+              <div class="reticle-target" id="reticle-btn" onclick="toggleDemoDevice()">
+                <div class="reticle-ring locked" id="reticle-ring">
+                  <div class="crosshair-t"></div>
+                  <div class="crosshair-b"></div>
+                  <div class="crosshair-l"></div>
+                  <div class="crosshair-r"></div>
+                  <div class="reticle-inner">
+                    <span class="bolt">⚡</span>
+                    <span class="action-text" id="action-label">TAP TO TOGGLE</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="device-info">
+                <strong id="device-title">Living Room Floor Lamp</strong>
+                <div class="device-entity">light.living_room_floor · <span id="device-state" style="color: #34d399;">ON</span></div>
+              </div>
+
+              <div class="reticle-hint">
+                Tap reticle to toggle · Hold to teach
+              </div>
+            </div>
+
+            <div class="phone-nav-pill"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SECTION: How It Works & Precision Features (Merged 3 Pillars) -->
     <section id="how-it-works" class="how-it-works-section">
@@ -92,19 +134,22 @@
           <div class="how-card">
             <div class="how-num">01</div>
             <h3>Rotation Vector Aiming</h3>
-            <p>Point. Tap.</p>
+            <p>Fuses compass azimuth and gravity pitch angles to project a directional raycast. The smart reticle transitions smoothly from searching to locked on target in ~30ms.</p>
+            <div class="card-metric">Lock Latency: ~30ms</div>
           </div>
 
           <div class="how-card">
             <div class="how-num">02</div>
             <h3>Context Controls &amp; Sensitivity</h3>
-            <p>Context Panel offers stepless light dimming or speaker volume. Tighten the aiming cone (±10°) for tight clusters or widen it (±25°) for ceiling fans.</p>
+            <p>Slide open the bottom tray for stepless light dimming or speaker volume. Tighten the aiming cone (±10°) for tight clusters or widen it (±25°) for ceiling fans.</p>
+            <div class="card-metric">Aiming Cone: ±10° to ±25°</div>
           </div>
 
           <div class="how-card">
             <div class="how-num">03</div>
             <h3>Room-Aware &amp; 100% Local</h3>
-            <p>Checks your active Home Assistant room presence before executing state changes. Authenticated service calls dispatch straight over your Wi-Fi.</p>
+            <p>Checks your active Home Assistant room presence before executing state changes to prevent drywall cross-firing. Authenticated service calls dispatch straight over your Wi-Fi.</p>
+            <div class="card-metric">LAN Dispatch: ~14ms</div>
           </div>
         </div>
       </div>
@@ -114,8 +159,9 @@
     <section id="setup" class="setup-section">
       <div class="container">
         <div class="section-header">
-          <div class="section-kicker">Get going in Under 2 Minutes</div>
-          <h2 class="section-title">Setup Guide </h2>
+          <div class="section-kicker">EASY 2-STEP ONBOARDING</div>
+          <h2 class="section-title">Setup Guide (Under 2 Minutes)</h2>
+          <p class="section-subtitle">No cloud account required. 100% local Home Assistant WebSocket &amp; REST execution.</p>
         </div>
 
         <div style="background: #0b1c3a; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 24px; padding: 36px; max-width: 800px; margin: 0 auto;">
@@ -123,12 +169,12 @@
             <div class="step-item">
               <span class="step-badge">1</span>
               <h4>Connect &amp; Authenticate</h4>
-              <p>Enter your local LAN address (e.g. http://192.168.1.50:8123) and paste your Long-Lived Access Token generated in Home Assistant under <em>Profile → Security</em>.</p>
+              <p>Enter your local LAN address (e.g. <code>http://192.168.1.50:8123</code>) and paste your Long-Lived Access Token generated in Home Assistant under <em>Profile → Security</em>.</p>
             </div>
             <div class="step-item">
               <span class="step-badge">2</span>
               <h4>Pick Zone Source &amp; Aim</h4>
-              <p>Select your room presence tracker (e.g. input_select.current_room or BLE beacon), long-press the reticle, pick your fixture, aim, and save. Coordinates are saved locally!</p>
+              <p>Select your room presence tracker (e.g. <code>input_select.current_room</code> or BLE beacon), long-press the reticle, pick your fixture, and release. Coordinates are saved locally!</p>
             </div>
           </div>
         </div>
