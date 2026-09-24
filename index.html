@@ -4,30 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pointly — The Point-and-Tap Universal Remote for Home Assistant</title>
-  <meta name="description" content="Point your Android phone directly at a lamp, speaker, or switch and toggle it instantly. Room-aware spatial control for Home Assistant.">
+  <meta name="description" content="Turn your phone into a magic wand for your smart home. Point at a light, TV, or speaker and toggle it instantly over local LAN.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Sticky Header -->
   <header class="site-header">
     <div class="header-container">
       <a href="#" class="brand-link">
         <svg class="brand-icon" viewBox="0 0 200 200" width="36" height="36">
           <rect width="200" height="200" rx="44" fill="#132B55"/>
           <circle cx="100" cy="100" r="72" stroke="#7DD3FC" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
-          <path d="M 100 52 L 138 142 L 100 126 L 62 142 Z" fill="#0284C7" stroke="#BAE6FD" stroke-width="2"/>
-          <text x="100" y="112" fill="#FB923C" font-size="28" font-weight="900" text-anchor="middle" dominant-baseline="central">P</text>
+          <path d="M 100 60 L 136 140 L 100 124 L 64 140 Z" fill="#0284C7" stroke="#BAE6FD" stroke-width="2"/>
+          <text x="100" y="108" fill="#FB923C" font-size="28" font-weight="900" text-anchor="middle" dominant-baseline="central">P</text>
         </svg>
         <span class="brand-name">Pointly</span>
       </a>
       <nav class="nav-links">
-        <a href="#features">Features</a>
         <a href="#how-it-works">How It Works</a>
-        <a href="#setup">Setup</a>
+        <a href="#setup">Setup Guide</a>
         <a href="#protips">Pro-Tips</a>
+        <a href="privacy.html">Privacy Policy</a>
       </nav>
       <div class="header-cta">
         <a href="https://github.com/pointly-app/pointly/releases" class="btn-play">Get on Google Play</a>
@@ -35,94 +35,164 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <main>
+    <!-- SECTION: Hero Showcase with Interactive Reticle Simulator -->
     <section class="hero-section">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="eyebrow">Smart Home Remote for Home Assistant</div>
-          <h1 class="hero-title">Point at anything.<br><span class="accent-text">Tap to toggle.</span></h1>
-          <p class="hero-description">
-            Stop digging through endless dashboard cards or arguing with voice assistants. Pointly turns your Android phone into a magic wand: aim directly at a lamp, speaker, or switch, and toggle it instantly.
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Universal Spatial Remote for Home Assistant</span>
+            <span class="divider">·</span>
+            <span class="mono-tag">v1.2 Open Beta</span>
+          </div>
+
+          <h1 class="hero-title">
+            Point at your lamp.<br>
+            <span class="gradient-text">Tap to toggle instantly.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Stop digging through endless dashboard cards or arguing with voice assistants. <strong>Pointly</strong> turns your Android phone into an intuitive magic wand: point directly at a light, TV, or speaker, and it toggles in milliseconds over local LAN.
           </p>
-          <div class="hero-actions">
-            <a href="https://github.com/pointly-app/pointly/releases" class="badge-googleplay">
-              <span>GET IT ON</span>
-              <strong>Google Play</strong>
+
+          <div class="hero-ctas">
+            <a href="https://github.com/pointly-app/pointly/releases" class="btn-google-play">
+              <span class="btn-text">
+                <span class="subtext">GET IT ON</span>
+                <span class="maintext">Google Play</span>
+              </span>
+            </a>
+
+            <a href="https://github.com/pointly-app/pointly/releases" class="btn-apk">
+              Download APK v1.2
             </a>
           </div>
-          <div class="hero-meta">
-            <span>Android 12+</span>
+
+          <div class="hero-specs">
+            <span class="spec-item">✓ Android 12, 13, 14 &amp; 15</span>
+            <span class="spec-item">✓ Room-Aware (No drywall cross-firing)</span>
+            <span class="spec-item">✓ 100% Local WebSocket Speed</span>
           </div>
         </div>
-        
-        <!-- Live Reticle Interactive Demo -->
-        <div class="hero-preview">
-          <div class="reticle-phone">
-            <div class="reticle-status">Zone: Living Room</div>
-            <div class="reticle-target" id="reticle">
-              <div class="reticle-ring locked">
-                <div class="reticle-inner">
-                  <span class="bolt">⚡</span>
-                  <span class="action-text">TAP TO TOGGLE</span>
+
+        <!-- Phone Mockup Container (9:19.5 Flagship Android Ratio) -->
+        <div class="hero-mockup-wrapper">
+          <div class="phone-bezel">
+            <div class="phone-earpiece">
+              <div class="phone-cam-dot"></div>
+            </div>
+
+            <!-- Phone Screen Simulation -->
+            <div class="phone-screen">
+              <div class="reticle-status-bar">
+                <span class="zone-badge">Zone: Living Room</span>
+                <span class="sensor-badge">42° Azimuth</span>
+              </div>
+
+              <div class="reticle-target" id="reticle-btn" onclick="toggleDemoDevice()">
+                <div class="reticle-ring locked" id="reticle-ring">
+                  <div class="crosshair-t"></div>
+                  <div class="crosshair-b"></div>
+                  <div class="crosshair-l"></div>
+                  <div class="crosshair-r"></div>
+                  <div class="reticle-inner">
+                    <span class="bolt">⚡</span>
+                    <span class="action-text" id="action-label">TAP TO TOGGLE</span>
+                  </div>
                 </div>
               </div>
+
+              <div class="device-info">
+                <strong id="device-title">Living Room Floor Lamp</strong>
+                <div class="device-entity">light.living_room_floor · <span id="device-state" style="color: #34d399;">ON</span></div>
+              </div>
+
+              <div class="reticle-hint">
+                Tap reticle to toggle · Hold to teach
+              </div>
             </div>
-            <div class="reticle-device-name">Floor Lamp (light.living_room_floor)</div>
+
+            <div class="phone-nav-pill"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Key Features & Specs -->
-    <section id="features" class="features-section">
+    <!-- SECTION: How It Works & Precision Features (Merged 3 Pillars) -->
+    <section id="how-it-works" class="how-it-works-section">
       <div class="container">
-        <h2 class="section-title">Engineered for instantaneous aiming</h2>
-        <div class="cards-grid">
-          <div class="feature-card">
-            <div class="card-num">01</div>
-            <h3>Rotation Vector Tracking</h3>
-            <p>Combines compass azimuth and pitch sensors to calculate the exact direction vector your phone is pointing.</p>
+        <div class="section-header">
+          <div class="section-kicker">SIMPLE &amp; ACCURATE</div>
+          <h2 class="section-title">How Pointly Works</h2>
+          <p class="section-subtitle">
+            Fast, directional spatial targeting paired with seamless Home Assistant room presence.
+          </p>
+        </div>
+
+        <div class="how-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div class="how-card">
+            <div class="how-num">01</div>
+            <h3>Rotation Vector Aiming</h3>
+            <p>Fuses compass azimuth and gravity pitch angles to project a directional raycast. The smart reticle transitions smoothly from searching to locked on target in ~30ms.</p>
+            <div class="card-metric">Lock Latency: ~30ms</div>
           </div>
-          <div class="feature-card">
-            <div class="card-num">02</div>
-            <h3>3-State Smart Reticle</h3>
-            <p>Smoothly transitions Grey (searching) → Amber (near a target) → Green (locked on and ready to toggle).</p>
+
+          <div class="how-card">
+            <div class="how-num">02</div>
+            <h3>Context Controls &amp; Sensitivity</h3>
+            <p>Slide open the bottom tray for stepless light dimming or speaker volume. Tighten the aiming cone (±10°) for tight clusters or widen it (±25°) for ceiling fans.</p>
+            <div class="card-metric">Aiming Cone: ±10° to ±25°</div>
           </div>
-          <div class="feature-card">
-            <div class="card-num">03</div>
-            <h3>Room-Aware Zone Scoping</h3>
-            <p>Never triggers the living room lamp behind the bedroom wall. Matches your exact Home Assistant room zone.</p>
-          </div>
-          <div class="feature-card">
-            <div class="card-num">04</div>
-            <h3>Teach in Seconds</h3>
-            <p>No coordinates or floor plans. Long-press the reticle, pick your entity from Home Assistant, and aim. Done.</p>
+
+          <div class="how-card">
+            <div class="how-num">03</div>
+            <h3>Room-Aware &amp; 100% Local</h3>
+            <p>Checks your active Home Assistant room presence before executing state changes to prevent drywall cross-firing. Authenticated service calls dispatch straight over your Wi-Fi.</p>
+            <div class="card-metric">LAN Dispatch: ~14ms</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Setup Guide -->
+    <!-- SECTION: Setup Guide -->
     <section id="setup" class="setup-section">
       <div class="container">
-        <h2 class="section-title">Ready in under 2 minutes</h2>
-        <div class="setup-steps">
-          <div class="step-item">
-            <span class="step-badge">1</span>
-            <h4>Enter HA Base URL</h4>
-            <p>Connect using your local LAN IP or HA mdns (e.g. <code>http://homeassistant.local:8123</code>) *IP recommended for best experience</p>
+        <div class="section-header">
+          <div class="section-kicker">EASY 2-STEP ONBOARDING</div>
+          <h2 class="section-title">Setup Guide (Under 2 Minutes)</h2>
+          <p class="section-subtitle">No cloud account required. 100% local Home Assistant WebSocket &amp; REST execution.</p>
+        </div>
+
+        <div style="background: #0b1c3a; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 24px; padding: 36px; max-width: 800px; margin: 0 auto;">
+          <div class="setup-steps" style="display: flex; flex-direction: column; gap: 24px;">
+            <div class="step-item">
+              <span class="step-badge">1</span>
+              <h4>Connect &amp; Authenticate</h4>
+              <p>Enter your local LAN address (e.g. <code>http://192.168.1.50:8123</code>) and paste your Long-Lived Access Token generated in Home Assistant under <em>Profile → Security</em>.</p>
+            </div>
+            <div class="step-item">
+              <span class="step-badge">2</span>
+              <h4>Pick Zone Source &amp; Aim</h4>
+              <p>Select your room presence tracker (e.g. <code>input_select.current_room</code> or BLE beacon), long-press the reticle, pick your fixture, and release. Coordinates are saved locally!</p>
+            </div>
           </div>
-          <div class="step-item">
-            <span class="step-badge">2</span>
-            <h4>Paste Long-Lived Token</h4>
-            <p>Generate safely inside your Home Assistant profile under Security → Long-Lived Access Tokens.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Pro-Tips & FAQ -->
+    <section id="protips" class="protips-section">
+      <div class="container">
+        <div class="protips-box">
+          <div class="protip-header">
+            <strong>💡 Pro-Tips for Pinpoint Aiming Results:</strong>
           </div>
-          <div class="step-item">
-            <span class="step-badge">3</span>
-            <h4>Aim & Pair</h4>
-            <p>Select your room-tracker entity, long-press to teach your first device, and start pointing.</p>
-          </div>
+          <ul class="protip-list">
+            <li><strong>Use Local LAN IPs:</strong> Always enter your server's direct LAN IP (e.g. <code>http://192.168.1.100:8123</code>). Android mDNS resolver can occasionally sleep or introduce 500ms lag.</li>
+            <li><strong>Room Presence Tracking:</strong> Pointly matches zones by exact string. Use an entity that outputs specific room names (like BLE beacons or room helpers). A generic "home/away" person tracker will treat your entire house as one zone.</li>
+            <li><strong>Figure-8 Calibration:</strong> If aiming feels slightly drift-prone near steel appliances or TVs, wave your phone in a quick "figure-8" motion for 2 seconds to recalibrate the magnetometer.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -131,12 +201,39 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>© 2026 Pointly for Home Assistant. Open-source local remote.</p>
+      <div class="footer-brand">
+        <span class="footer-title">Pointly</span>
+        <span>· The point-and-tap universal remote for Home Assistant</span>
+      </div>
       <div class="footer-links">
         <a href="https://github.com/pointly-app/pointly">GitHub Repo</a>
-        <a href="https://github.com/pointly-app/pointly/releases">Releases</a>
+        <a href="https://github.com/pointly-app/pointly/releases">APK Releases</a>
+        <a href="#setup">Setup Guide</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
   </footer>
+
+  <script>
+    let isDeviceOn = true;
+    function toggleDemoDevice() {
+      isDeviceOn = !isDeviceOn;
+      const stateEl = document.getElementById('device-state');
+      const ringEl = document.getElementById('reticle-ring');
+      const actionEl = document.getElementById('action-label');
+      
+      if (isDeviceOn) {
+        stateEl.textContent = 'ON';
+        stateEl.style.color = '#34d399';
+        ringEl.className = 'reticle-ring locked';
+        actionEl.textContent = 'TAP TO TOGGLE';
+      } else {
+        stateEl.textContent = 'OFF';
+        stateEl.style.color = '#94a3b8';
+        ringEl.className = 'reticle-ring';
+        actionEl.textContent = 'TAP TO TOGGLE';
+      }
+    }
+  </script>
 </body>
 </html>
