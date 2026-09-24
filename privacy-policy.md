@@ -124,6 +124,3 @@
 <footer>
   <p>&copy; 2026 Scott D. All rights reserved.</p>
 </footer>
-
-</body>
-</html>
