@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Pointly</title>
+  <meta name="description" content="Privacy Policy for Pointly, the point-and-tap universal remote for Home Assistant. Information on data collection, UK GDPR rights, and third-party services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .privacy-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 24px 100px 24px;
+    }
+    .privacy-card {
+      background: #0b1a36;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 28px;
+      padding: 48px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    .privacy-card h1 {
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .privacy-card .last-updated {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--accent-cyan);
+      margin-bottom: 36px;
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(56, 189, 248, 0.1);
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+    .privacy-card h2 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 40px;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .privacy-card h3 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    .privacy-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+    .privacy-card ul {
+      margin: 12px 0 20px 24px;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .privacy-card li {
+      margin-bottom: 8px;
+    }
+    .privacy-card a {
+      color: var(--accent-cyan);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s;
+    }
+    .privacy-card a:hover {
+      color: #7dd3fc;
+    }
+    .privacy-card strong {
+      color: #fff;
+    }
+    .privacy-card table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 24px 0;
+      font-size: 13px;
+      background: #071329;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .privacy-card th {
+      background: #0d2248;
+      color: var(--accent-cyan);
+      text-align: left;
+      padding: 12px 16px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .privacy-card td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .privacy-card tr:last-child td {
+      border-bottom: none;
+    }
+    .back-nav {
+      margin-bottom: 24px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: rgba(56, 189, 248, 0.2);
+    }
+    @media (max-width: 640px) {
+      .privacy-card {
+        padding: 24px 18px;
+      }
+      .privacy-card h1 {
+        font-size: 28px;
+      }
+      .privacy-card table, .privacy-card thead, .privacy-card tbody, .privacy-card th, .privacy-card td, .privacy-card tr {
+        display: block;
+      }
+      .privacy-card th {
+        display: none;
+      }
+      .privacy-card td {
+        padding: 10px 12px;
+        border-bottom: none;
+      }
+      .privacy-card tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link">
+        <svg class="brand-icon" viewBox="0 0 200 200" width="36" height="36">
+          <rect width="200" height="200" rx="44" fill="#132B55"/>
+          <circle cx="100" cy="100" r="72" stroke="#7DD3FC" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+          <path d="M 100 60 L 136 140 L 100 124 L 64 140 Z" fill="#0284C7" stroke="#BAE6FD" stroke-width="2"/>
+          <text x="100" y="108" fill="#FB923C" font-size="28" font-weight="900" text-anchor="middle" dominant-baseline="central">P</text>
+        </svg>
+        <span class="brand-name">Pointly</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#setup">Setup Guide</a>
+        <a href="privacy.html" style="color: var(--accent-cyan); font-weight: 600;">Privacy Policy</a>
+      </nav>
+      <div class="header-cta">
+        <a href="index.html" class="btn-play">Back to App</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="privacy-container">
+    <div class="back-nav">
+      <a href="index.html" class="back-btn">
+        ← Back to Pointly Home
+      </a>
+    </div>
+
+    <article class="privacy-card">
+      <h1>Privacy Policy for Pointly</h1>
+      <div class="last-updated">Last updated: 24 September 2026</div>
+
+      <h2>1. Introduction &amp; Data Controller</h2>
+      <p>Welcome to Pointly ("the App").</p>
+      <p>Pointly is developed and operated by <strong>Scott D</strong> ("I", "me", or "my"), an individual based in the United Kingdom.</p>
+      <p>Under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018, I act as the Data Controller for personal data processed through the App.</p>
+      <p>If you have any questions about this Privacy Policy or how your information is handled, you can contact me at:</p>
+      <ul>
+        <li>Email: <a href="mailto:privacy@scottdavis.uk">privacy@scottdavis.uk</a></li>
+        <li>Location: United Kingdom</li>
+      </ul>
+
+      <h2>2. Information We Collect</h2>
+      <p>Because Pointly does not require you to register an account, I do not directly collect or store personal details like your name, physical address, or phone number. However, the App relies on third-party services that collect data automatically.</p>
+
+      <h3>A. Data Collected Automatically (via Third-Party SDKs)</h3>
+      <p>When you use the App, Google services (AdMob and Google Analytics) automatically collect certain technical data, which may include:</p>
+      <ul>
+        <li><strong>Device Identifiers:</strong> Google Advertising ID (GAID/AAID), unique device identifiers (Android ID).</li>
+        <li><strong>Technical &amp; Device Information:</strong> Device model, operating system version, mobile network provider, language settings, and screen resolution.</li>
+        <li><strong>Usage &amp; Interaction Data:</strong> Screens visited within the App, session duration, button taps, crash logs, and general performance diagnostics.</li>
+        <li><strong>Location Data:</strong> Coarse location (e.g., country or city level derived from IP address). We do not collect precise GPS location.</li>
+      </ul>
+
+      <h3>B. Information You Provide Directly</h3>
+      <ul>
+        <li>If you contact me for customer support, I will collect your email address and any details you provide in your message in order to resolve your inquiry.</li>
+      </ul>
+
+      <h2>3. How We Use Your Data &amp; Our Legal Bases (UK GDPR)</h2>
+      <p>Under the UK GDPR, data must be processed lawfully. The purposes and legal grounds for processing your data include:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Purpose</th>
+            <th>Type of Data</th>
+            <th>Legal Basis (UK GDPR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Serving Advertisements (AdMob)</strong></td>
+            <td>Device IDs, Ad interaction data, IP address</td>
+            <td>Consent (for personalised ads &amp; storing/accessing identifiers on your device) / Legitimate Interests (for non-personalised ad delivery &amp; fraud detection).</td>
+          </tr>
+          <tr>
+            <td><strong>Analytics &amp; App Improvement (Google Analytics)</strong></td>
+            <td>In-app actions, crash logs, performance metrics</td>
+            <td>Consent (where required by PECR) or Legitimate Interests (to fix bugs and optimise performance).</td>
+          </tr>
+          <tr>
+            <td><strong>Customer Support</strong></td>
+            <td>Email address and message contents</td>
+            <td>Legitimate Interests (responding to queries and providing assistance).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. Third-Party Service Providers</h2>
+      <p>The App integrates tools from Google LLC. These providers process information under their own privacy policies:</p>
+      <ul>
+        <li><strong>Google AdMob (Advertising)</strong>
+          <ul>
+            <li>Used to serve advertisements within the App. AdMob may use device identifiers and cookies/mobile tracking to show ads relevant to your interests (if consent is given) or contextual ads.</li>
+            <li><a href="https://support.google.com/admob/answer/6128543?hl=en-GB" target="_blank" rel="noopener">Google AdMob Privacy Policy</a></li>
+          </ul>
+        </li>
+        <li><strong>Google Analytics for Firebase / Google Analytics (Analytics)</strong>
+          <ul>
+            <li>Used to understand how users interact with the App, identify crashes, and improve functionality.</li>
+            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>5. User Consent &amp; Your Advertising Choices</h2>
+      <p>In accordance with UK and European regulations (UK GDPR and PECR):</p>
+      <ul>
+        <li><strong>Consent Banner:</strong> If you are located in the UK or EEA, the App will prompt you via a Google-certified Consent Management Platform (CMP) to choose whether you consent to personalised advertising and analytics tracking.</li>
+        <li><strong>Withdrawing Consent:</strong> You can change your advertising preferences at any time through the App settings (if implemented) or via your Android device settings (Settings &gt; Google &gt; Ads &gt; Reset or Delete advertising ID).</li>
+      </ul>
+
+      <h2>6. International Data Transfers</h2>
+      <p>Because our third-party provider (Google LLC) is based globally, your data may be transferred to and stored on servers located outside the United Kingdom (such as the United States).</p>
+      <p>These transfers are governed by UK-approved standard safeguards, including the UK International Data Transfer Addendum or Standard Contractual Clauses (SCCs), ensuring your information remains protected to standards equivalent to the UK GDPR.</p>
+
+      <h2>7. Data Retention</h2>
+      <ul>
+        <li>I do not maintain a private server containing your personal data.</li>
+        <li>Data collected via Google AdMob and Google Analytics is retained according to Google's data retention schedules (typically ranging from 2 to 14 months for analytics events).</li>
+        <li>Support emails are deleted once your query has been resolved, unless retention is required for legal reasons.</li>
+      </ul>
+
+      <h2>8. Your Rights Under UK GDPR</h2>
+      <p>If you are located in the UK, you have rights regarding your personal data, including:</p>
+      <ul>
+        <li><strong>Right of Access:</strong> Request a copy of the personal data held about you.</li>
+        <li><strong>Right to Rectification:</strong> Request correction of inaccurate information.</li>
+        <li><strong>Right to Erasure:</strong> Request deletion of your personal data.</li>
+        <li><strong>Right to Restrict or Object:</strong> Object to or restrict certain processing activities.</li>
+        <li><strong>Right to Withdraw Consent:</strong> Where processing relies on consent, you may withdraw it at any time.</li>
+      </ul>
+      <p>To exercise any of these rights, please email <a href="mailto:privacy@scottdavis.uk">privacy@scottdavis.uk</a>. Note that because data is tied to pseudonymous device identifiers rather than personal profiles, I may request your Google Advertising ID to locate the relevant data.</p>
+
+      <h3>Right to Complain to the Regulator</h3>
+      <p>You have the right to lodge a complaint with the UK supervisory authority:</p>
+      <ul>
+        <li>Information Commissioner's Office (ICO)</li>
+        <li>Website: <a href="https://ico.org.uk" target="_blank" rel="noopener">https://ico.org.uk</a></li>
+        <li>Helpline: 0303 123 1113</li>
+      </ul>
+
+      <h2>9. Children's Privacy</h2>
+      <p>Pointly is not intended for use by children under the age of 13 (or under 16 in the UK/EEA where applicable). I do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal data, please contact me immediately, and I will take steps to remove that information.</p>
+
+      <h2>10. Changes to This Privacy Policy</h2>
+      <p>I may update this Privacy Policy from time to time to reflect updates to the App or changes in law. Any updates will be posted on this page with a revised "Last updated" date. You are advised to review this policy periodically.</p>
+
+      <h2>11. Contact Us</h2>
+      <p>If you have any questions or suggestions regarding this Privacy Policy, feel free to contact:</p>
+      <ul>
+        <li>Developer: Scott D</li>
+        <li>Email: <a href="mailto:apps@scottdavis.uk">apps@scottdavis.uk</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-title">Pointly</span>
+        <span>· The point-and-tap universal remote for Home Assistant</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/pointly-app/pointly">GitHub Repo</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
