@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Pointly</title>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #222; max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; background: #fafafa; }
-  h1 { font-size: 1.8rem; border-bottom: 3px solid #4a7bd4; padding-bottom: 0.4rem; }
-  h2 { font-size: 1.25rem; margin-top: 2rem; color: #2c4a7c; }
-  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; background: #fff; }
-  th, td { border: 1px solid #ccc; padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
-  th { background: #eef2f8; }
-  a { color: #2c5aa0; }
-  li { margin-bottom: 0.3rem; }
-  footer { margin-top: 3rem; font-size: 0.85rem; color: #777; border-top: 1px solid #ddd; padding-top: 1rem; }
-</style>
-</head>
-<body>
 
 <h1>Privacy Policy for Pointly</h1>
 <p><em>Last updated: 24 September 2026</em></p>
