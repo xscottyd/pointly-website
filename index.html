@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
 	/* Pointly Pure CSS for GitHub Pages - Material Neo-Wand Style */
 	:root {
@@ -223,133 +222,66 @@
 	}
 
 	/* ======================================================== */
-	/* SMARTPHONE FRAME WITH PROPER 9:19.5 ANDROID ASPECT RATIO */
+	/* HERO APP SCREENSHOT (real build capture) */
 	/* ======================================================== */
-	.phone-frame-9-19-5 {
-	  width: 320px;
-	  height: 670px;
-	  margin: 0 auto;
-	  border-radius: 52px;
-	  background: #020617;
-	  padding: 14px;
-	  border: 4px solid #334155;
-	  box-shadow: 0 30px 70px -15px rgba(2, 132, 199, 0.35);
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: space-between;
-	  position: relative;
+	.hero-mockup-wrapper {
+		display: flex;
+		justify-content: center;
 	}
-	.phone-earpiece {
-	  width: 80px;
-	  height: 14px;
-	  background: #0f172a;
-	  border-radius: 20px;
-	  margin: 0 auto 10px auto;
-	  display: flex;
-	  align-items: center;
-	  justify-content: flex-end;
-	  padding-right: 8px;
-	  border: 1px solid #1e293b;
+	.phone-bezel {
+		padding: 3px;
+		border-radius: 28px;
+		box-shadow: 0 30px 70px -15px rgba(2, 132, 199, 0.35);
 	}
-	.camera-lens {
-	  width: 7px;
-	  height: 7px;
-	  background: #020617;
-	  border-radius: 50%;
-	  border: 1px solid #475569;
-	}
-	.phone-screen {
-	  flex: 1;
-	  background: #091428;
-	  border-radius: 38px;
-	  padding: 24px 20px;
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: space-between;
-	  border: 1px solid rgba(30, 58, 138, 0.5);
-	  text-align: center;
-	}
-	.phone-nav-pill {
-	  width: 120px;
-	  height: 4px;
-	  background: #475569;
-	  border-radius: 10px;
-	  margin: 10px auto 2px auto;
+	.hero-screenshot {
+		width: 300px;
+		max-width: 100%;
+		height: auto;
+		aspect-ratio: 9 / 16;
+		object-fit: cover;
+		border-radius: 28px;
+		border: 4px solid #334155;
+		background: #020617;
+		box-shadow: 0 30px 70px -15px rgba(2, 132, 199, 0.35);
+		display: block;
 	}
 
-	.reticle-status-bar {
-	  display: flex;
-	  justify-content: space-between;
-	  font-size: 11px;
-	  color: var(--text-muted);
-	  font-family: var(--font-mono);
+	/* Hero CTA buttons + spec checklist (were unstyled) */
+	.hero-ctas {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		flex-wrap: wrap;
+		margin-top: 28px;
 	}
-	.zone-badge {
-	  background: rgba(2, 132, 199, 0.2);
-	  color: var(--accent-cyan);
-	  padding: 2px 8px;
-	  border-radius: 12px;
+	.btn-google-play {
+		display: inline-flex;
+		align-items: center;
+		background: #000;
+		color: #fff;
+		text-decoration: none;
+		border: 1px solid #334155;
+		border-radius: 10px;
+		padding: 8px 18px;
+		transition: border-color 0.2s;
 	}
-	.sensor-badge {
-	  color: #94a3b8;
+	.btn-google-play:hover {
+		border-color: var(--accent-cyan);
 	}
-	.reticle-target {
-	  cursor: pointer;
-	  margin: 20px 0;
+	.btn-google-play .btn-text {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.2;
 	}
-	.reticle-ring.locked {
-	  position: relative;
-	  width: 140px;
-	  height: 140px;
-	  margin: 0 auto;
-	  border-radius: 50%;
-	  border: 2px solid var(--accent-green);
-	  box-shadow: 0 0 30px rgba(52, 211, 153, 0.3);
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  background: rgba(5, 46, 22, 0.35);
-	  transition: transform 0.15s;
+	.btn-google-play .subtext {
+		font-size: 10px;
+		letter-spacing: 0.15em;
+		color: #94a3b8;
 	}
-	.reticle-ring.locked:active {
-	  transform: scale(0.96);
-	}
-	.crosshair-t { position: absolute; top: 6px; width: 10px; height: 2px; background: var(--accent-green); }
-	.crosshair-b { position: absolute; bottom: 6px; width: 10px; height: 2px; background: var(--accent-green); }
-	.crosshair-l { position: absolute; left: 6px; width: 2px; height: 10px; background: var(--accent-green); }
-	.crosshair-r { position: absolute; right: 6px; width: 2px; height: 10px; background: var(--accent-green); }
-	.reticle-inner {
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	}
-	.bolt {
-	  font-size: 28px;
-	}
-	.action-text {
-	  font-size: 10px;
-	  font-weight: 700;
-	  color: #fff;
-	  margin-top: 4px;
-	  letter-spacing: 0.05em;
-	}
-	.device-info {
-	  margin-top: 10px;
-	}
-	.device-info strong {
-	  font-size: 15px;
-	  display: block;
-	}
-	.device-entity {
-	  font-size: 11px;
-	  color: var(--text-muted);
-	  font-family: var(--font-mono);
-	  margin-top: 2px;
-	}
-	.reticle-hint {
-	  margin-top: 12px;
-	  font-size: 11px;
-	  color: #64748b;
+	.btn-google-play .maintext {
+		font-family: var(--font-display);
+		font-size: 18px;
+		font-weight: 700;
 	}
 
 	/* ======================================================== */
@@ -689,9 +621,7 @@
         <span class="brand-name">Pointly</span>
       </a>
       <nav class="nav-links">
-        <a href="#how-it-works">How It Works</a>
-        <a href="#setup">Setup Guide</a>
-        <a href="#protips">Pro-Tips</a>
+        <a href="#protips">Tips</a>
         <a href="privacy.html">Privacy Policy</a>
       </nav>
       <div class="header-cta">
@@ -729,56 +659,14 @@
               </span>
             </a>
 
-            <a href="https://github.com/pointly-app/pointly/releases" class="btn-apk">
-              Download APK v1.2
-            </a>
-          </div>
-
-          <div class="hero-specs">
-            <span class="spec-item">✓ Android 12, 13, 14 &amp; 15</span>
-            <span class="spec-item">✓ Room-Aware (No drywall cross-firing)</span>
-            <span class="spec-item">✓ 100% Local WebSocket Speed</span>
           </div>
         </div>
 
-        <!-- Phone Mockup Container (9:19.5 Flagship Android Ratio) -->
+        <!-- App Screenshot (real build, 9:16 portrait) -->
         <div class="hero-mockup-wrapper">
           <div class="phone-bezel">
-            <div class="phone-earpiece">
-              <div class="phone-cam-dot"></div>
-            </div>
-
-            <!-- Phone Screen Simulation -->
-            <div class="phone-screen">
-              <div class="reticle-status-bar">
-                <span class="zone-badge">Zone: Living Room</span>
-                <span class="sensor-badge">42° Azimuth</span>
-              </div>
-
-              <div class="reticle-target" id="reticle-btn" onclick="toggleDemoDevice()">
-                <div class="reticle-ring locked" id="reticle-ring">
-                  <div class="crosshair-t"></div>
-                  <div class="crosshair-b"></div>
-                  <div class="crosshair-l"></div>
-                  <div class="crosshair-r"></div>
-                  <div class="reticle-inner">
-                    <span class="bolt">⚡</span>
-                    <span class="action-text" id="action-label">TAP TO TOGGLE</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="device-info">
-                <strong id="device-title">Living Room Floor Lamp</strong>
-                <div class="device-entity">light.living_room_floor · <span id="device-state" style="color: #34d399;">ON</span></div>
-              </div>
-
-              <div class="reticle-hint">
-                Tap reticle to toggle · Hold to teach
-              </div>
-            </div>
-
-            <div class="phone-nav-pill"></div>
+            <img src="app-screenshot.png" alt="Pointly app screenshot — Office Light toggle with brightness slider and quick actions"
+                 class="hero-screenshot" loading="eager" width="1080" height="1920">
           </div>
         </div>
       </div>
@@ -791,56 +679,51 @@
           <div class="section-kicker">SIMPLE &amp; ACCURATE</div>
           <h2 class="section-title">How Pointly Works</h2>
           <p class="section-subtitle">
-            Fast, directional spatial targeting paired with seamless Home Assistant room presence.
+            Point your phone at the target, tap the reticle, done — driven by your phone's motion sensors and Home Assistant's room presence.
           </p>
         </div>
 
         <div class="how-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
           <div class="how-card">
             <div class="how-num">01</div>
-            <h3>Rotation Vector Aiming</h3>
-            <p>Fuses compass azimuth and gravity pitch angles to project a directional raycast. The smart reticle transitions smoothly from searching to locked on target in ~30ms.</p>
-            <div class="card-metric">Lock Latency: ~30ms</div>
+            <h3>Point &amp; Shoot Control</h3>
+            <p>Pointly uses your phone's rotation vector (compass + pitch) to detect what you're aiming at in real time. Aim at a lamp, speaker, or switch — no dashboard digging, no voice commands.</p>
+            <div class="card-metric">Real-time aiming</div>
           </div>
 
           <div class="how-card">
             <div class="how-num">02</div>
-            <h3>Context Controls &amp; Sensitivity</h3>
-            <p>Slide open the bottom tray for stepless light dimming or speaker volume. Tighten the aiming cone (±10°) for tight clusters or widen it (±25°) for ceiling fans.</p>
-            <div class="card-metric">Aiming Cone: ±10° to ±25°</div>
+            <h3>Smart Lock-On Reticle</h3>
+            <p>The circular target transitions smoothly from <strong style="color:#94a3b8;">Grey</strong> (searching) to <strong style="color:var(--accent-amber);">Amber</strong> (near a target) to <strong style="color:var(--accent-green);">Green</strong> (locked on). Tap to toggle, or long-press to re-aim.</p>
+            <div class="card-metric">Tap to toggle · Long-press to teach</div>
           </div>
 
           <div class="how-card">
             <div class="how-num">03</div>
-            <h3>Room-Aware &amp; 100% Local</h3>
-            <p>Checks your active Home Assistant room presence before executing state changes to prevent drywall cross-firing. Authenticated service calls dispatch straight over your Wi-Fi.</p>
-            <div class="card-metric">LAN Dispatch: ~14ms</div>
+            <h3>Room-Aware Zone Scoping</h3>
+            <p>Pointly checks which room you're in via Home Assistant before matching, so aiming at your bedside lamp can't trigger the living room lamp behind the wall. No room-aware entity? Manage rooms manually in Settings.</p>
+            <div class="card-metric">Manage Rooms</div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SECTION: Setup Guide -->
-    <section id="setup" class="setup-section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">EASY 2-STEP ONBOARDING</div>
-          <h2 class="section-title">Setup Guide (Under 2 Minutes)</h2>
-          <p class="section-subtitle">No cloud account required. 100% local Home Assistant WebSocket &amp; REST execution.</p>
-        </div>
+          <div class="how-card">
+            <div class="how-num">04</div>
+            <h3>Teach in Seconds</h3>
+            <p>No need to manually coordinate entites. Long-press the reticle to enter Teach Mode, pick the entity from Home Assistant, aim at the fixture, save.</p>
+            <div class="card-metric">Saved locally, instantly</div>
+          </div>
 
-        <div style="background: #0b1c3a; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 24px; padding: 36px; max-width: 800px; margin: 0 auto;">
-          <div class="setup-steps" style="display: flex; flex-direction: column; gap: 24px;">
-            <div class="step-item">
-              <span class="step-badge">1</span>
-              <h4>Connect &amp; Authenticate</h4>
-              <p>Enter your local LAN address (e.g. <code>http://192.168.1.50:8123</code>) and paste your Long-Lived Access Token generated in Home Assistant under <em>Profile → Security</em>.</p>
-            </div>
-            <div class="step-item">
-              <span class="step-badge">2</span>
-              <h4>Pick Zone Source &amp; Aim</h4>
-              <p>Select your room presence tracker (e.g. <code>input_select.current_room</code> or BLE beacon), long-press the reticle, pick your fixture, and release. Coordinates are saved locally!</p>
-            </div>
+          <div class="how-card">
+            <div class="how-num">05</div>
+            <h3>Context Controls</h3>
+            <p>Beyond on/off — the context tray adds quick brightness adjustments, volume controls, media buttons, or custom scripts mapped to whatever you're targeting.</p>
+            <div class="card-metric">Brightness · Volume · Media · Scripts</div>
+          </div>
+
+          <div class="how-card">
+            <div class="how-num">06</div>
+            <h3>Per-Device Sensitivity</h3>
+            <p>Dense cluster of devices? Tighten the tolerance cone to pick out individual bulbs. Solitary ceiling fan? Widen it so you can't miss. Tune the aiming cone per target in Settings.</p>
+            <div class="card-metric">Per-target cone tuning</div>
           </div>
         </div>
       </div>
@@ -857,6 +740,7 @@
             <li><strong>Use Local LAN IPs:</strong> Always enter your server's direct LAN IP (e.g. <code>http://192.168.1.100:8123</code>). Android mDNS resolver can occasionally sleep or introduce 500ms lag.</li>
             <li><strong>Room Presence Tracking:</strong> Pointly matches zones by exact string. Use an entity that outputs specific room names (like BLE beacons or room helpers). A generic "home/away" person tracker will treat your entire house as one zone.</li>
             <li><strong>Figure-8 Calibration:</strong> If aiming feels slightly drift-prone near steel appliances or TVs, wave your phone in a quick "figure-8" motion for 2 seconds to recalibrate the magnetometer.</li>
+             <li><strong>Roomless Devices:</strong> Have a device you always want to be able to trigger, no matter what room you're in? Take it out of a room, and it'll show up whereever you are. Useful for setting a timer, or reminder.</li>
           </ul>
         </div>
       </div>
@@ -871,9 +755,6 @@
         <span>· The point-and-tap universal remote for Home Assistant</span>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/pointly-app/pointly">GitHub Repo</a>
-        <a href="https://github.com/pointly-app/pointly/releases">APK Releases</a>
-        <a href="#setup">Setup Guide</a>
         <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
