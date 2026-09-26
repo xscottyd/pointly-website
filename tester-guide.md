@@ -7,11 +7,11 @@ permalink: /tester-guide.html
 
 **Version under test:** 1.1.0
 
-**Get it:** https://play.google.com/store/apps/details?id=com.xscottyd.pointly
+**Get it:** (https://play.google.com/store/apps/details?id=com.xscottyd.pointly)
 
-**Web:** https://play.google.com/apps/testing/com.xscottyd.pointly
+**Web:** (https://play.google.com/apps/testing/com.xscottyd.pointly)
 
-**More about the app:** https://pointly.scottdavis.uk/
+**More about the app:** (https://pointly.scottdavis.uk/)
 
 **Contact:** pointly-beta@scottdavis.uk
 
