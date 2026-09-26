@@ -6,10 +6,15 @@ permalink: /tester-guide.html
 # Pointly — tester guide
 
 **Version under test:** 1.1.0
+
 **Get it:** https://play.google.com/store/apps/details?id=com.xscottyd.pointly
+
 **Web:** https://play.google.com/apps/testing/com.xscottyd.pointly
+
 **More about the app:** https://pointly.scottdavis.uk/
+
 **Contact:** pointly-beta@scottdavis.uk
+
 
 ---
 
@@ -30,8 +35,7 @@ The "aim" is only saved from a single position. So if you set everything up when
 
 You'll need:
 
-- An **Android phone** (Android 12 or newer). It must have a **compass/rotation sensor** — if
-  yours doesn't, the core pointing feature can't work and we need to know that.
+- An **Android phone** (Android 12 or newer). It must have a **compass/rotation sensor**
 - About **20 minutes**.
 - Optionally your Home Assistant details (Step 1 will tell you whether you need them).
 
@@ -120,68 +124,63 @@ Work through these in any order. **Note anything that surprises you** — good o
 
 ### Getting set up
 
-- [ ] **Teach your first device.** Long-press the big button on the home screen, pick a device
-      from the list, aim at it, and save where it is.
-- [ ] **Teach a second and third device.** Ideally not too close together, but try it and see what fustrates you!
-  [ ] **Toggle each of them.** Check the state actually changed, and that it changes back.
-- [ ] **Delete one of them** and tell us how hard that was to find.
+-  **Teach your first device.** Long-press the big button on the home screen, pick a device from the list, aim at it, and save where it is.
+-  **Teach a second and third device.** Ideally not too close together, but try it and see what fustrates you!
+-  **Toggle each of them.** Check the state actually changed, and that it changes back.
+-  **Delete one of them** and tell us how hard that was to find.
 
 ### The core interaction
 
-- [ ] **Try to lock onto a device from across the room.**
-- [ ] **Try to pick out one device from a tight cluster** (two bulbs next to each other).
-- [ ] **Deliberately point at nothing** and see what happens.
-- [ ] **Move your phone fast, then slowly**, and compare how it behaves.
-- [ ] **Point at a device, then walk away and come back** — does it still know what you meant?
-- [ ] **Point at a different device while one is already matched** — does it hand over cleanly?
+-  **Try to lock onto a device from across the room.**
+-  **Try to pick out one device from a tight cluster** (two bulbs next to each other).
+-  **Deliberately point at nothing** and see what happens.
+-  **Move your phone fast, then slowly**, and compare how it behaves.
+-  **Point at a device, then walk away and come back** — does it still know what you meant?
+-  **Point at a different device while one is already matched** — does it hand over cleanly?
 
 ### Room awareness
 
-- [ ] **Switch rooms** (swipe on the screen left or right, or tap the room name to pick).
-- [ ] **Add a room.** Give it a name.
-- [ ] **Rename a room.**
-- [ ] **Delete a room** that has a device in it, and see what happens to that device.
-- [ ] *(Option A only)* **Import your rooms from Home Assistant areas** instead of typing them.
-- [ ] *(Option A only)* If you have a room-occupancy entity, **switch to using it** and see
+-  **Switch rooms** (swipe on the screen left or right, or tap the room name to pick).
+-  **Add a room.** Give it a name.
+-  **Rename a room.**
+-  **Delete a room** that has a device in it, and see what happens to that device.
+-  *(Option A only)* **Import your rooms from Home Assistant areas** instead of typing them.
+-  *(Option A only)* If you have a room-occupancy entity, **switch to using it** and see
       whether the app follows you around the house.
 
 ### Context controls
 
-- [ ] **Adjust brightness** on a light that supports it.
-- [ ] **Adjust volume** on a media player.
-- [ ] **Try the media buttons** (play, pause, skip) where available.
-- [ ] **Open the panel on a device that has no extra controls** and see whether that's confusing
+-  **Adjust brightness** on a light that supports it.
+-  **Adjust volume** on a media player.
+-  **Try the media buttons** (play, pause, skip) where available.
+-  **Open the panel on a device that has no extra controls** and see whether that's confusing
       or fine.
 
 ### Hot buttons (custom one-tap actions)
 
-- [ ] **Add a hot button** to a device — pick a service, fill in the fields, give it a name, save.
-- [ ] **Test-fire the action before saving it.**
-- [ ] **Edit it** afterwards.
-- [ ] **Delete it.**
-- [ ] **Add two or three hot buttons to the same device** and check they're all reachable.
-- [ ] **Create one for a scene or script** rather than a plain on/off (Option B has
-      "Movie Night" and "Goodnight" to try).
+-  **Add a hot button** to a device — pick a service, fill in the fields, give it a name, save.
+-  **Test-fire the action before saving it.**
+-  **Edit it** afterwards.
+-  **Delete it.**
+-  **Add two or three hot buttons to the same device** and check they're all reachable.
+-  **Create one for a scene or script** rather than a plain on/off (Option B has "Movie Night" and "Goodnight" to try).
 
 ### Settings
 
-- [ ] **Change the accent colour** — try a preset, then a custom colour.
-- [ ] **Change the global sensitivity**, then go back and try pointing again.
-- [ ] **Change the sensitivity for one single device** so it differs from the global setting.
-- [ ] **Turn on "sticky match"** for a device you use a lot, then point at it, look away, and
-      keep using it. Then point at a *different* device and see if it releases properly.
-- [ ] **Re-aim or rename a taught device.**
-- [ ] **Open Help** from the home screen and tell us whether it answered your questions.
-- [ ] **Open the debug readout** (long-press the cog) and have a look.
+-  **Change the accent colour** — try a preset, then a custom colour.
+-  **Change the global sensitivity**, then go back and try pointing again.
+-  **Change the sensitivity for one single device** so it differs from the global setting.
+-  **Turn on "sticky match"** for a device you use a lot, then point at it, look away, and keep using it. Then point at a *different* device and see if it releases properly.
+-  **Re-aim or rename a taught device.**
+-  **Open Help** from the home screen and tell us whether it answered your questions.
+-  **Open the debug readout** (long-press the cog) and have a look.
 
 ### Ads
 
 *(Skip this section if you don't see any adverts — you may well not.)*
 
-- [ ] **Find the advert** (there's a banner on the Settings screen, and one in the debug
-      readout).
-- [ ] **Tell us what you think of it** — did it get in the way, was it appropriate, did it look
-      like it belonged?
+- **Find the advert** (there's a banner on the Settings screen, and one in the debug readout).
+- **Tell us what you think of it** — did it get in the way?
 
 
 ---
