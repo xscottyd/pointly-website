@@ -20,7 +20,7 @@ MUTED = (148, 163, 184)
 SOFT = (203, 213, 225)
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FONT_DIR = os.environ.get("OG_FONT_DIR", os.path.expanduser("~/.hermes/cache/scratch/ogfonts"))
+FONT_DIR = os.environ.get("OG_FONT_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts"))
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "og-image.jpg")
 SHOT = next(
     (p for p in (os.path.join(HERE, "app-screenshot.jpg"), os.path.join(HERE, "v2", "app-screenshot.jpg"))
