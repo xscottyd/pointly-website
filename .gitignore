@@ -1,0 +1,8 @@
+# Local previews / build output
+.preview/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Design exploration: kept on disk, too heavy and too noisy to track
+redesigns/

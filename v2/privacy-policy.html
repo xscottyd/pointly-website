@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Pointly</title>
+  <meta name="description" content="Privacy Policy for Pointly, the point-and-tap universal remote for Home Assistant. What the App collects, the third-party SDKs involved, and your rights under UK GDPR.">
+  <meta name="theme-color" content="#04080f">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://pointly.scottdavis.uk/privacy-policy.html">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:site_name" content="Pointly">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Privacy Policy — Pointly">
+  <meta property="og:description" content="What Pointly collects, the third-party SDKs involved, and your rights under UK GDPR.">
+  <meta property="og:image" content="https://pointly.scottdavis.uk/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pointly: a point-and-tap remote for Home Assistant on Android.">
+  <meta property="og:url" content="https://pointly.scottdavis.uk/privacy-policy.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy Policy — Pointly">
+  <meta name="twitter:description" content="What Pointly collects, the third-party SDKs involved, and your rights under UK GDPR.">
+  <meta name="twitter:image" content="https://pointly.scottdavis.uk/og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preload" href="fonts/outfit-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jakarta-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Outfit'; src: url('fonts/outfit-700-latin.woff2') format('woff2');
+      font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Outfit'; src: url('fonts/outfit-800-latin.woff2') format('woff2');
+      font-weight: 800; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Plus Jakarta Sans'; src: url('fonts/jakarta-400-latin.woff2') format('woff2');
+      font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Plus Jakarta Sans'; src: url('fonts/jakarta-700-latin.woff2') format('woff2');
+      font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'JetBrains Mono'; src: url('fonts/jetbrains-mono-400-latin.woff2') format('woff2');
+      font-weight: 400; font-style: normal; font-display: swap; }
+
+    :root {
+      --bg: #04080f;
+      --bg-band: #070d18;
+      --line: rgba(148, 163, 184, 0.2);
+      --line-soft: rgba(148, 163, 184, 0.15);
+      --text: #e2e8f0;
+      --text-strong: #ffffff;
+      --muted: #94a3b8;
+      --soft: #cbd5e1;
+      --green: #34d399;
+      --green-light: #6ee7b7;
+      --amber: #fbbf24;
+      --grey: #94a3b8;
+      --font-display: 'Outfit', -apple-system, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+      --max: 1280px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--green); transition: color 0.2s, border-color 0.2s, background-color 0.2s; }
+    a:hover { color: var(--green-light); }
+    a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 4px; }
+
+    img { max-width: 100%; }
+    h1, h2, h3 { margin: 0; }
+    p { margin: 0; }
+
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .mono { font-family: var(--font-mono); }
+    .kicker { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; color: var(--muted); }
+
+    .skip-link {
+      position: absolute; left: 16px; top: -48px;
+      background: var(--green); color: #04080f; padding: 8px 14px; border-radius: 8px;
+      font-weight: 600; text-decoration: none; z-index: 20;
+    }
+    .skip-link:focus { top: 12px; }
+
+    /* Header */
+    .site-header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(4, 8, 15, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap; padding-top: 16px; padding-bottom: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-strong); }
+    .brand:hover { color: var(--text-strong); }
+    .brand img { display: block; border-radius: 9px; }
+    .brand-name { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -0.02em; }
+    .nav { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 13px; }
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { color: var(--text-strong); }
+    .nav .btn-outline { color: var(--green); }
+    .btn-outline {
+      padding: 10px 16px; border-radius: 8px; border: 1px solid var(--green);
+      color: var(--green); text-decoration: none;
+    }
+    .btn-outline:hover { background: rgba(52, 211, 153, 0.1); color: var(--green-light); }
+
+    /* Document */
+    .doc-head { max-width: 760px; margin: 0 auto; padding: 72px 24px 8px; }
+    .doc-head h1 {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(36px, 4.4vw, 54px); line-height: 1.03; letter-spacing: -0.035em;
+      margin: 14px 0 16px; color: var(--text-strong);
+    }
+    .doc-head .updated { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+    .doc-head .updated span { color: var(--green); }
+
+    .doc { max-width: 760px; margin: 0 auto; padding: 0 24px 96px; }
+    .doc section { padding: 32px 0; border-top: 1px solid var(--line-soft); }
+    .doc section:first-of-type { margin-top: 36px; }
+    .doc h2 {
+      display: flex; align-items: baseline; gap: 14px;
+      font-family: var(--font-display); font-weight: 700; font-size: 23px; letter-spacing: -0.02em;
+      color: var(--text-strong); margin-bottom: 12px;
+    }
+    .doc h2 .num { font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; color: var(--green); }
+    .doc h3 {
+      font-family: var(--font-display); font-weight: 600; font-size: 16px;
+      color: var(--text-strong); margin: 24px 0 8px;
+    }
+    .doc p { font-size: 15px; color: var(--muted); }
+    .doc p + p { margin-top: 10px; }
+    .doc strong { color: var(--soft); font-weight: 600; }
+    .doc em { color: var(--soft); }
+    .doc ul { list-style: none; margin: 12px 0 0; padding: 0; }
+    .doc li { position: relative; padding-left: 22px; margin-bottom: 9px; font-size: 15px; color: var(--muted); }
+    .doc li::before { content: "›"; position: absolute; left: 4px; color: var(--green); }
+    .doc li ul { margin-top: 9px; }
+    .doc li li::before { content: "·"; color: var(--grey); }
+    .doc code { font-family: var(--font-mono); font-size: 13px; color: var(--amber); }
+
+    .doc table { width: 100%; border-collapse: collapse; margin: 18px 0 0; font-size: 13.5px; line-height: 1.55; border: 1px solid var(--line); }
+    .doc th {
+      text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--line);
+      font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--green); background: rgba(52, 211, 153, 0.06);
+    }
+    .doc td { padding: 14px 16px; border-bottom: 1px solid var(--line-soft); vertical-align: top; color: var(--muted); }
+    .doc tbody tr:last-child td { border-bottom: 0; }
+
+    /* Footer */
+    .site-footer { border-top: 1px solid var(--line-soft); padding: 32px 0; }
+    .footer-inner {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;
+      font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    }
+    .footer-inner nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-inner a { color: var(--muted); }
+    .footer-inner a:hover { color: var(--text-strong); }
+
+    @media (max-width: 860px) {
+      .doc-head { padding-top: 44px; }
+      .doc { padding-bottom: 64px; }
+      .doc h2 { font-size: 20px; }
+      .doc table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Pointly home">
+        <img src="logo.svg" alt="" width="36" height="36">
+        <span class="brand-name">Pointly</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">[ home ]</a>
+        <a class="btn-outline" href="https://play.google.com/store/apps/details?id=com.xscottyd.pointly">Get on Google Play</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="doc-head">
+      <p class="kicker">LEGAL · PRIVACY POLICY</p>
+      <h1>Privacy Policy for Pointly</h1>
+      <p class="updated">Last updated: <span>13 November 2026</span></p>
+    </div>
+
+    <div class="doc">
+
+      <section>
+        <h2><span class="num">01</span> Introduction &amp; Data Controller</h2>
+        <p>Welcome to Pointly ("the App").</p>
+        <p>Pointly is developed and operated by <strong>Scott D</strong> ("I", "me", or "my"), an individual based in the United Kingdom.</p>
+        <p>Under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018, I act as the Data Controller for personal data processed through the App.</p>
+        <p>If you have any questions about this Privacy Policy or how your information is handled, you can contact me at:</p>
+        <ul>
+          <li>Email: <a href="mailto:privacy@scottdavis.uk">privacy@scottdavis.uk</a></li>
+          <li>Location: United Kingdom</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="num">02</span> Information We Collect</h2>
+        <p>Because Pointly does not require you to register an account, I do not directly collect or store personal details like your name, physical address, or phone number. However, the App includes third-party SDKs that collect data automatically.</p>
+
+        <h3>A. AdMob (advertising)</h3>
+        <p>When you use the App, Google AdMob automatically collects certain technical data, which may include:</p>
+        <ul>
+          <li><strong>Device Identifiers:</strong> Google Advertising ID (GAID/AAID), unique device identifiers (Android ID).</li>
+          <li><strong>Technical &amp; Device Information:</strong> Device model, operating system version, mobile network provider, language settings, and screen resolution.</li>
+          <li><strong>Ad Interaction Data:</strong> Ad impressions, whether an ad was viewed or clicked, and general performance diagnostics used to deliver and improve advertising.</li>
+          <li><strong>Location Data:</strong> Coarse location (e.g., country or city level derived from IP address). We do not collect precise GPS location.</li>
+        </ul>
+
+        <h3>B. Google Analytics for Firebase &amp; Firebase Crashlytics</h3>
+        <p>The release build of the App also includes Google Analytics for Firebase and Firebase Crashlytics, which collect:</p>
+        <ul>
+          <li><strong>App activity:</strong> app launches and screen names — fixed internal names such as <code>remote</code> or <code>settings</code>, never anything you have typed.</li>
+          <li><strong>Usage events:</strong> a small fixed set of signals — welcome screen dismissed, debug overlay toggled, and the <em>kind</em> of Home Assistant endpoint in use (local, Nabu Casa, demo, custom, or unknown).</li>
+          <li><strong>Crash and non-fatal reports:</strong> stack trace, device model, Android version, app version, and a short fixed label describing where the failure happened.</li>
+        </ul>
+        <p>No Home Assistant URL, access token, entity ID, room or area name, or target name is ever sent to these services. Analytics and crash collection are disabled in debug builds.</p>
+
+        <h3>C. Information You Provide Directly</h3>
+        <ul>
+          <li>If you contact me for customer support, I will collect your email address and any details you provide in your message in order to resolve your inquiry.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="num">03</span> How We Use Your Data &amp; Our Legal Bases (UK GDPR)</h2>
+        <p>Under the UK GDPR, data must be processed lawfully. The purposes and legal grounds for processing your data include:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Purpose</th>
+              <th>Type of Data</th>
+              <th>Legal Basis (UK GDPR)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Serving Advertisements (AdMob)</strong></td>
+              <td>Device IDs, Ad interaction data, IP address</td>
+              <td>Legitimate Interests (delivering contextual, non-personalised advertising and fraud detection). No consent-based processing is used, because no personalised advertising is served.</td>
+            </tr>
+            <tr>
+              <td><strong>Product analytics &amp; crash reporting (Firebase)</strong></td>
+              <td>App instance and advertising IDs, screen and event names, crash stack traces, device and app version</td>
+              <td>Legitimate Interests (finding and fixing crashes, understanding which parts of the App are used). No Home Assistant endpoint, token, or entity data is involved.</td>
+            </tr>
+            <tr>
+              <td><strong>Customer Support</strong></td>
+              <td>Email address and message contents</td>
+              <td>Legitimate Interests (responding to queries and providing assistance).</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2><span class="num">04</span> Third-Party Service Providers</h2>
+        <p>The App integrates tools from Google LLC. These providers process information under their own privacy policies:</p>
+        <ul>
+          <li><strong>Google AdMob (Advertising)</strong>
+            <ul>
+              <li>Used to serve non-personalised (contextual) advertisements within the App. AdMob may use device identifiers to select and measure ads; no personalised or interest-based advertising is served.</li>
+              <li><a href="https://support.google.com/admob/answer/6128543?hl=en-GB" target="_blank" rel="noopener">Google AdMob Privacy Policy</a></li>
+            </ul>
+          </li>
+          <li><strong>Google Firebase (Analytics &amp; Crashlytics)</strong>
+            <ul>
+              <li>Google Analytics for Firebase records the App's screen names and a fixed vocabulary of usage events. Firebase Crashlytics records crash and non-fatal reports stamped with the build number. Neither receives your Home Assistant configuration or anything you have typed.</li>
+              <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></li>
+            </ul>
+          </li>
+        </ul>
+        <p>The App contacts only Google's advertising and analytics services and the Home Assistant instance you configure. It does not contact any other server operated by me.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">05</span> Advertising, Consent &amp; Your Choices</h2>
+        <p>Pointly serves <strong>non-personalised (contextual) advertising only</strong>.</p>
+        <p>I have deliberately chosen not to use personalised advertising, and I have not integrated a consent management platform (CMP) because I do not need one. Google's requirement for a Google-certified CMP applies to publishers serving <em>personalised</em> ads to users in the EEA, the UK and Switzerland; because Pointly requests contextual ads only, that requirement does not apply to this App.</p>
+        <ul>
+          <li><strong>No personalisation:</strong> ads are selected from the content of the screen and the general region of the request, not from a profile of you. Google's publisher first-party ID — which exists specifically to personalise ads across a publisher's own apps — is disabled in the App.</li>
+          <li><strong>No consent prompt:</strong> there is no consent banner because there is no personalised advertising to consent to.</li>
+          <li><strong>Opting out:</strong> you can limit or reset advertising identifiers at any time via your Android device settings (Settings &gt; Google &gt; Ads &gt; Reset or delete advertising ID), or by using the system's "Delete advertising ID" app permission. Doing so affects ad personalisation across all apps on your device.</li>
+          <li><strong>Removing ads:</strong> the App does not currently offer an in-app purchase to remove advertising.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="num">06</span> International Data Transfers</h2>
+        <p>Because our third-party providers (Google LLC) are based globally, your data may be transferred to and stored on servers located outside the United Kingdom (such as the United States).</p>
+        <p>These transfers are governed by UK-approved standard safeguards, including the UK International Data Transfer Addendum or Standard Contractual Clauses (SCCs), ensuring your information remains protected to standards equivalent to the UK GDPR.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">07</span> Data Retention</h2>
+        <ul>
+          <li>I do not maintain a private server containing your personal data.</li>
+          <li>Data collected via Google AdMob, Google Analytics for Firebase, and Firebase Crashlytics is retained according to Google's data retention schedules (analytics events typically 2 to 14 months; crash reports around 90 days).</li>
+          <li>Support emails are deleted once your query has been resolved, unless retention is required for legal reasons.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="num">08</span> Your Rights Under UK GDPR</h2>
+        <p>If you are located in the UK, you have rights regarding your personal data, including:</p>
+        <ul>
+          <li><strong>Right of Access:</strong> Request a copy of the personal data held about you.</li>
+          <li><strong>Right to Rectification:</strong> Request correction of inaccurate information.</li>
+          <li><strong>Right to Erasure:</strong> Request deletion of your personal data.</li>
+          <li><strong>Right to Restrict or Object:</strong> Object to or restrict certain processing activities.</li>
+          <li><strong>Right to Withdraw Consent:</strong> Where processing relies on consent, you may withdraw it at any time.</li>
+        </ul>
+        <p>To exercise any of these rights, please email <a href="mailto:privacy@scottdavis.uk">privacy@scottdavis.uk</a>. Note that because data is tied to pseudonymous device identifiers rather than personal profiles, I may request your Google Advertising ID to locate the relevant data.</p>
+
+        <h3>Right to Complain to the Regulator</h3>
+        <p>You have the right to lodge a complaint with the UK supervisory authority:</p>
+        <ul>
+          <li>Information Commissioner's Office (ICO)</li>
+          <li>Website: <a href="https://ico.org.uk" target="_blank" rel="noopener">https://ico.org.uk</a></li>
+          <li>Helpline: 0303 123 1113</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="num">09</span> Children's Privacy</h2>
+        <p>Pointly is not intended for use by children under the age of 13 (or under 16 in the UK/EEA where applicable). I do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal data, please contact me immediately, and I will take steps to remove that information.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">10</span> Changes to This Privacy Policy</h2>
+        <p>I may update this Privacy Policy from time to time to reflect updates to the App or changes in law. Any updates will be posted on this page with a revised "Last updated" date. You are advised to review this policy periodically.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">11</span> Contact Us</h2>
+        <p>If you have any questions or suggestions regarding this Privacy Policy, feel free to contact:</p>
+        <ul>
+          <li>Developer: Scott D</li>
+          <li>Email: <a href="mailto:apps@scottdavis.uk">apps@scottdavis.uk</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Pointly · The point-and-tap universal remote for Home Assistant</span>
+      <nav aria-label="Footer">
+        <a href="./">Home</a>
+        <a href="tester-guide.html">Beta tester guide</a>
+        <a href="mailto:pointly@scottdavis.uk">pointly@scottdavis.uk</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

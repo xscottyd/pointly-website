@@ -1,0 +1,8 @@
+# pointly.scottdavis.uk
+# NOTE: this file only takes effect if Cloudflare's "Managed robots.txt"
+# (AI Crawl Control) is switched off for the zone. While it is on, Cloudflare
+# serves its own robots.txt at the edge and this one is ignored.
+User-agent: *
+Allow: /
+
+Sitemap: https://pointly.scottdavis.uk/sitemap.xml
