@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Build the 1200x630 Open Graph / social card for pointly.scottdavis.uk.
 
-Usage:  python3 tools/make-og-image.py [output.jpg]
-Needs:  Pillow, and the two variable TTFs in OG_FONT_DIR.
+Usage:  python3 tools/make-og-image.py [output.png|output.jpg]
+Needs:  Pillow, and the two variable TTFs in tools/fonts.
 Fonts are the OFL-licensed Outfit and Plus Jakarta Sans faces the site uses.
+
+The card committed at the repo root (og-image.png, 1734x907) was supplied by
+Scott, not produced here. This script renders an alternative and deliberately
+defaults to og-image-generated.png so a run cannot overwrite the real asset.
 """
 import os
 import sys
@@ -21,7 +25,7 @@ SOFT = (203, 213, 225)
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONT_DIR = os.environ.get("OG_FONT_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts"))
-OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "og-image.jpg")
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "og-image-generated.png")
 SHOT = next(
     (p for p in (os.path.join(HERE, "app-screenshot.jpg"), os.path.join(HERE, "v2", "app-screenshot.jpg"))
      if os.path.exists(p)),
@@ -126,7 +130,10 @@ def main():
     d.rounded_rectangle(pill, radius=10, outline=GREEN, width=2)
     d.text((96, 496), "Free on Google Play  ·  Android 12+", font=font("jakarta-var.ttf", 20, 700), fill=GREEN, anchor="lm")
 
-    img.save(OUT, quality=88, optimize=True, progressive=True)
+    if OUT.lower().endswith(".png"):
+        img.save(OUT, optimize=True)
+    else:
+        img.save(OUT, quality=88, optimize=True, progressive=True)
     print(f"wrote {OUT} {img.size} {os.path.getsize(OUT)} bytes")
 
 
