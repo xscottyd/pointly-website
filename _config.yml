@@ -5,8 +5,8 @@
 # generated ones, so the legacy markdown sources and the design scratch
 # directories are excluded from the published site.
 #
-# tester-guide.md is deliberately NOT excluded: it is the public
-# /tester-guide.html page the footer links to.
+# Every page on this site is now hand-written HTML. Any .md added later needs a
+# decision: exclude it (static source) or give it a layout (published page).
 exclude:
   - redesigns
   - tools
