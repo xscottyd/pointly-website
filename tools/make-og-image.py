@@ -5,9 +5,10 @@ Usage:  python3 tools/make-og-image.py [output.png|output.jpg]
 Needs:  Pillow, and the two variable TTFs in tools/fonts.
 Fonts are the OFL-licensed Outfit and Plus Jakarta Sans faces the site uses.
 
-The card committed at the repo root (og-image.png, 1734x907) was supplied by
-Scott, not produced here. This script renders an alternative and deliberately
-defaults to og-image-generated.png so a run cannot overwrite the real asset.
+The card committed at the repo root (og-image.jpg, 1734x907, JPEG q95 4:4:4) was
+supplied by Scott and only converted here, not produced by this script. This
+script renders an alternative and deliberately defaults to
+og-image-generated.png so a run cannot overwrite the real asset.
 """
 import os
 import sys
